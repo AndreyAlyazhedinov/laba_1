@@ -13,6 +13,7 @@ def main():
     print("Простой калькулятор")
     print(f"2 + 2 = {add(2, 2)}")
     print(f"67 - 52 = {subtract(67, 52)}")
+    print(f"20 + 21 = {add(20, 21)}")
 
 
 if __name__ == "__main__":
