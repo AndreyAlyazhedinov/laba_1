@@ -1,0 +1,11 @@
+#!/bin/sh
+echo "Проверка кода flake8 перед коммитом..."
+FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.py$')
+if [ -n "$FILES" ]; then
+    flake8 $FILES
+    if [ $? -ne 0 ]; then
+        echo "flake8 нашёл ошибки стиля — коммит отменён."
+        exit 1
+    fi
+fi
+exit 0
