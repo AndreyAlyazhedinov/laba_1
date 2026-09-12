@@ -10,7 +10,7 @@ def subtract(a, b):
 
 
 def main():
-    print("Калькулятор")
+    print("Простой калькулятор")
     print(f"2 + 2 = {add(2, 2)}")
     print(f"67 - 52 = {subtract(67, 52)}")
 
